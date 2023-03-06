@@ -18,13 +18,21 @@ export default class counter extends Component {
     this.setState({count: this.state.count * 2})
   }
 
+  clear(){
+    this.setState({count: this.state.count = 0})
+  }
+
   render() {
     return (
       <View style={styles.contador}>
         <Text>Contador: {this.state.count} </Text>
         <Button onPress={() => this.increment()} title="+" />
+        <Text> </Text>
         <Button onPress={() => this.decrement()} title="-" />
+        <Text> </Text>
         <Button onPress={() => this.double()} title="*2" />
+        <Text> </Text>
+        <Button onPress={() => this.clear()} title="Limpar" />
       </View>
     );
   }
